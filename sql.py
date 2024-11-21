@@ -10,6 +10,7 @@ db_password = 'password'
 db_name = 'database_name'
 db_host = 'localhost'
 backup_dir = '/path/to/backup/directory'
+interval_minutes = 10
 
 def backup_mysql():
     try:
@@ -60,15 +61,9 @@ def schedule_backup(interval_minutes):
     threading.Thread(target=run_schedule, daemon=True).start()
 
 def get_user_input():
-    try:
-        interval_minutes = int(input("Every Min: "))
-        if interval_minutes <= 0:
-            print("لطفاً یک عدد مثبت وارد کنید.")
-        else:
-            schedule_backup(interval_minutes)
-            print(f" Backup Set To Every {interval_minutes} Min.")
-    except ValueError:
-        print("Warning")
+
+    schedule_backup(interval_minutes)
+    print(f" Backup Set To Every {interval_minutes} Min.")
 
 if __name__ == "__main__":
     get_user_input()
