@@ -17,5 +17,5 @@
 
 1. **کلون کردن مخزن گیت‌هاب**
    ابتدا مخزن پروژه را از گیت‌هاب کلون کنید:
-   ```bash
-pip install pymysql schedule
+   ```bash pip install pymysql schedule
+
