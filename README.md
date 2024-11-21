@@ -18,5 +18,4 @@
 1. **کلون کردن مخزن گیت‌هاب**
    ابتدا مخزن پروژه را از گیت‌هاب کلون کنید:
    ```bash
-   git clone https://github.com/username/repository-name.git
-   cd repository-name
+pip install pymysql schedule
